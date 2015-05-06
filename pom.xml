@@ -19,4 +19,22 @@
 			<version>3.4</version>
 		</dependency>
 	</dependencies>
+	
+	<url>https://github.com/scompo/IntervalsMerge</url>
+	<description>test for intervals merging</description>
+	
+	<ciManagement>
+		<url>https://travis-ci.org/scompo/IntervalsMerge</url>
+		<system>travis-ci</system>
+	</ciManagement>
+	
+	<scm>
+		<url>https://github.com/scompo/IntervalsMerge</url>
+		<developerConnection>Mauro Scomparin</developerConnection>
+		<connection>scm:git:https://github.com/scompo/IntervalsMerge.git</connection>
+	</scm>
+	<issueManagement>
+		<url>https://github.com/scompo/IntervalsMerge/issues</url>
+		<system>github</system>
+	</issueManagement>
 </project>
