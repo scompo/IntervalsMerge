@@ -30,11 +30,15 @@
 	
 	<scm>
 		<url>https://github.com/scompo/IntervalsMerge</url>
-		<developerConnection>Mauro Scomparin</developerConnection>
+		<developerConnection>scm:git:https://github.com/scompo/IntervalsMerge.git</developerConnection>
 		<connection>scm:git:https://github.com/scompo/IntervalsMerge.git</connection>
 	</scm>
 	<issueManagement>
 		<url>https://github.com/scompo/IntervalsMerge/issues</url>
 		<system>github</system>
 	</issueManagement>
+	<organization>
+		<name>Mauro Scomparin</name>
+		<url>https://github.com/scompo/IntervalsMerge</url>
+	</organization>
 </project>
