@@ -18,14 +18,13 @@ public class First<T extends Number & Comparable<? super T>> implements
 	private static final int FIRST_ELEMENT = 0;
 	private Comparator<Interval<T>> COMPARATOR = new Comparator<Interval<T>>() {
 
-		@Override
 		public int compare(Interval<T> o1, Interval<T> o2) {
-
+			
 			return o1.getStart().compareTo(o2.getStart());
 		}
+
 	};
 
-	@Override
 	public List<Interval<T>> merge(List<Interval<T>> toMerge) {
 
 		List<Interval<T>> res = new ArrayList<Interval<T>>();
