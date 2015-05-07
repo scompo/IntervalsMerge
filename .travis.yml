@@ -3,5 +3,5 @@ jdk:
   - oraclejdk8
 
 after_script : 
-  - "mvn -X -e pmd:pmd"
+  - "mvn pmd:pmd"
   - "cat ./target/pmd.txt"

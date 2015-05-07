@@ -1,8 +1,6 @@
 package it.scompo.intervals.merge.utils;
 
 public abstract class NullChek {
-	
-	private String a;
 
 	private NullChek() {
 
