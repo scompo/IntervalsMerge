@@ -3,9 +3,9 @@ package it.scompo.intervals.merge.utils;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.IntervalsOverlapChecker;
 
-public class OverlapCheck<T extends Comparable<T>> implements IntervalsOverlapChecker<T> {
+public class IntervalOverlapCheckImpl<T extends Comparable<T>> implements IntervalsOverlapChecker<T> {
 
-	public OverlapCheck() {
+	public IntervalOverlapCheckImpl() {
 
 	}
 

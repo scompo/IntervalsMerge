@@ -4,13 +4,13 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.IntervalsOverlapChecker;
-import it.scompo.intervals.merge.utils.OverlapCheck;
+import it.scompo.intervals.merge.utils.IntervalOverlapCheckImpl;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestOverlapCheck {
+public class TestIntervalOverlapCheckImpl {
 
 	private static final Interval<Integer> ZEROES = new Interval<Integer>(0, 0);
 	private static final Interval<Integer> ONES = new Interval<Integer>(1, 1);
@@ -25,7 +25,7 @@ public class TestOverlapCheck {
 	@Before
 	public void setUp() throws Exception {
 		
-		checker = new OverlapCheck<Integer>();
+		checker = new IntervalOverlapCheckImpl<Integer>();
 	}
 
 	@After
