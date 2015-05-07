@@ -4,4 +4,4 @@ jdk:
 
 after_script : 
   - "mvn -X -e pmd:pmd"
-  - "./pmd-report.sh"
+  - "cat ./target/pmd.txt"
