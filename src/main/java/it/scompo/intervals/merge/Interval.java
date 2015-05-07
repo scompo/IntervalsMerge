@@ -2,7 +2,7 @@ package it.scompo.intervals.merge;
 
 import java.io.Serializable;
 
-public class Interval<T extends Number & Comparable<? super T>> implements
+public class Interval<T> implements
 		Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -39,7 +39,7 @@ public class Interval<T extends Number & Comparable<? super T>> implements
 
 	@Override
 	public String toString() {
-
+		
 		return "Interval [start=" + start + ", end=" + end + "]";
 	}
 
@@ -52,7 +52,6 @@ public class Interval<T extends Number & Comparable<? super T>> implements
 		return result;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,7 +60,7 @@ public class Interval<T extends Number & Comparable<? super T>> implements
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Interval<T> other = (Interval<T>) obj;
+		Interval<?> other = (Interval<?>) obj;
 		if (end == null) {
 			if (other.end != null)
 				return false;

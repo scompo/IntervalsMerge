@@ -1,28 +1,19 @@
 package it.scompo.intervals.merge.utils;
 
 import it.scompo.intervals.merge.Interval;
+import it.scompo.intervals.merge.IntervalsOverlapChecker;
 
-public abstract class OverlapCheck {
+public class OverlapCheck<T extends Comparable<T>> implements IntervalsOverlapChecker<T> {
 
-	private OverlapCheck() {
+	public OverlapCheck() {
 
 	}
 
-	public static <T extends Number & Comparable<? super T>> boolean overlapping(
-			Interval<T> first, Interval<T> second) {
-		
-		long firstStart = first.getStart().longValue();
-		long firstEnd = first.getEnd().longValue();
+	@Override
+	public boolean overlappingIntervals(Interval<T> first, Interval<T> second) {
 
-		long secondStart = second.getStart().longValue();
-		long secondEnd = second.getEnd().longValue();
-		
-		if(firstStart <= secondEnd && secondStart <= firstEnd){
-			
-			return true;
-		}
-
-		return false;
+		return (first.getStart().compareTo(second.getEnd()) <= 0)
+				&& (second.getStart().compareTo(first.getEnd()) <= 0);
 	}
 
 }

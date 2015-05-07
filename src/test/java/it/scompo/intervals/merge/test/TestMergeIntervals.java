@@ -1,4 +1,4 @@
-package it.scompo.intervals.merge.test.utils;
+package it.scompo.intervals.merge.test;
 
 import static it.scompo.intervals.merge.test.IntervalsConstants.INTERVALS_EMPTY;
 import static it.scompo.intervals.merge.test.IntervalsConstants.INTERVALS_JUST_ONE;
@@ -7,7 +7,7 @@ import static it.scompo.intervals.merge.test.IntervalsConstants.INTERVALS_TO_MER
 import static org.junit.Assert.assertEquals;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.IntervalMergingAlgorithm;
-import it.scompo.intervals.merge.algorithms.First;
+import it.scompo.intervals.merge.implementations.integer.FirstAlgorithmIntegerImplementation;
 
 import java.util.List;
 
@@ -22,7 +22,7 @@ public class TestMergeIntervals {
 	@Before
 	public void setUp() throws Exception {
 
-		mergingAlgorithm = new First<Integer>();
+		mergingAlgorithm = new FirstAlgorithmIntegerImplementation();
 	}
 
 	@After

@@ -5,23 +5,13 @@
 	<artifactId>IntervalsMerge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>IntervalsMerge</name>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.4</version>
-		</dependency>
-	</dependencies>
-
 	<url>https://github.com/scompo/IntervalsMerge</url>
 	<description>test for intervals merging</description>
+
+	<properties>
+		<pmd.skipPmdError>false</pmd.skipPmdError>
+		<format>txt</format>
+	</properties>
 
 	<ciManagement>
 		<url>https://travis-ci.org/scompo/IntervalsMerge</url>
@@ -33,15 +23,49 @@
 		<developerConnection>scm:git:https://github.com/scompo/IntervalsMerge.git</developerConnection>
 		<connection>scm:git:https://github.com/scompo/IntervalsMerge.git</connection>
 	</scm>
+
 	<issueManagement>
 		<url>https://github.com/scompo/IntervalsMerge/issues</url>
 		<system>github</system>
 	</issueManagement>
+
 	<organization>
 		<name>Mauro Scomparin</name>
 		<url>https://github.com/scompo/IntervalsMerge</url>
 	</organization>
-	
+
+	<dependencies>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.4</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<!-- http://maven.apache.org/plugins/maven-compiler-plugin/ -->
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<reporting>
 		<plugins>
 			<plugin>
@@ -50,8 +74,5 @@
 			</plugin>
 		</plugins>
 	</reporting>
-	<properties>
-		<pmd.skipPmdError>false</pmd.skipPmdError>
-		<format>txt</format>
-	</properties>
+
 </project>

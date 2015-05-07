@@ -1,9 +1,10 @@
 package it.scompo.intervals.merge.test.utils;
 
-import static it.scompo.intervals.merge.utils.OverlapCheck.overlapping;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import it.scompo.intervals.merge.Interval;
+import it.scompo.intervals.merge.IntervalsOverlapChecker;
+import it.scompo.intervals.merge.utils.OverlapCheck;
 
 import org.junit.After;
 import org.junit.Before;
@@ -18,9 +19,13 @@ public class TestOverlapCheck {
 			3);
 	private static final Interval<Integer> TWO_THREE = new Interval<Integer>(2,
 			3);
+	
+	private IntervalsOverlapChecker<Integer> checker;
 
 	@Before
 	public void setUp() throws Exception {
+		
+		checker = new OverlapCheck<Integer>();
 	}
 
 	@After
@@ -30,37 +35,37 @@ public class TestOverlapCheck {
 	@Test
 	public void testConsecutiveFalses() {
 
-		assertFalse(overlapping(ONES, TWOS));
-		assertFalse(overlapping(ZEROES, TWOS));
+		assertFalse(checker.overlappingIntervals(ONES, TWOS));
+		assertFalse(checker.overlappingIntervals(ZEROES, TWOS));
 	}
 
 	@Test
 	public void testAllInside() {
 
-		assertTrue(overlapping(TWOS, ONE_THREE));
-		assertTrue(overlapping(ONE_THREE, TWOS));
+		assertTrue(checker.overlappingIntervals(TWOS, ONE_THREE));
+		assertTrue(checker.overlappingIntervals(ONE_THREE, TWOS));
 	}
 
 	@Test
 	public void testSameStartOverlapMore() {
 
-		assertTrue(overlapping(ONES, ONE_THREE));
-		assertTrue(overlapping(ONE_THREE, ONES));
+		assertTrue(checker.overlappingIntervals(ONES, ONE_THREE));
+		assertTrue(checker.overlappingIntervals(ONE_THREE, ONES));
 	}
 	
 	@Test
 	public void testSame() {
 
-		assertTrue(overlapping(ONES, ONES));
-		assertTrue(overlapping(ONE_THREE, ONE_THREE));
-		assertTrue(overlapping(TWOS, TWOS));
+		assertTrue(checker.overlappingIntervals(ONES, ONES));
+		assertTrue(checker.overlappingIntervals(ONE_THREE, ONE_THREE));
+		assertTrue(checker.overlappingIntervals(TWOS, TWOS));
 	}
 	
 	@Test
 	public void testOverlapLessSameEnd() {
 
-		assertTrue(overlapping(TWO_THREE, ONE_THREE));
-		assertTrue(overlapping(ONE_THREE, TWO_THREE));
+		assertTrue(checker.overlappingIntervals(TWO_THREE, ONE_THREE));
+		assertTrue(checker.overlappingIntervals(ONE_THREE, TWO_THREE));
 	}
 
 }

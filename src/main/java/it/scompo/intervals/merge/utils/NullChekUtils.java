@@ -1,8 +1,8 @@
 package it.scompo.intervals.merge.utils;
 
-public abstract class NullChek {
+public abstract class NullChekUtils {
 
-	private NullChek() {
+	private NullChekUtils() {
 
 	}
 
