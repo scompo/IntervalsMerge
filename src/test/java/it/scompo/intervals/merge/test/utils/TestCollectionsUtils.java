@@ -1,10 +1,12 @@
 package it.scompo.intervals.merge.test.utils;
 
+import static it.scompo.intervals.merge.utils.CollectionsUtils.deepCopyCollectionIntoList;
 import static it.scompo.intervals.merge.utils.CollectionsUtils.onlyOneElement;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
@@ -31,6 +33,26 @@ public class TestCollectionsUtils {
 		assertFalse(onlyOneElement(Arrays.asList(LIST_TWO_ELEMENTS)));
 		assertFalse(onlyOneElement(Arrays.asList(LIST_NO_ELEMENTS)));
 		assertFalse(onlyOneElement(null));
+	}
+	
+	@Test
+	public void testDeepCopyCollectionIntoList() {
+		
+		
+		List<Integer> asList = Arrays.asList(LIST_TWO_ELEMENTS);
+		
+		List<Integer> res = deepCopyCollectionIntoList(asList);	
+		
+		assertFalse(res == asList);
+		
+		for (int i = 0; i < LIST_NO_ELEMENTS.length; i++) {
+			
+			Integer integer = LIST_NO_ELEMENTS[i];
+			
+			Integer integerRes = res.get(0);	
+			
+			assertFalse(integerRes == integer);
+		}
 	}
 
 }

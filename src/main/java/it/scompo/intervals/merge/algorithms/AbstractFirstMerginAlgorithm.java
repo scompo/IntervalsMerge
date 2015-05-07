@@ -3,7 +3,7 @@ package it.scompo.intervals.merge.algorithms;
 import static it.scompo.intervals.merge.utils.ComparisonUtils.max;
 import static it.scompo.intervals.merge.utils.ComparisonUtils.min;
 import static it.scompo.intervals.merge.utils.NullChekUtils.notNullElement;
-import static it.scompo.intervals.merge.utils.ScompoSerializationUtils.cloneCollection;
+import static it.scompo.intervals.merge.utils.CollectionsUtils.*;
 import it.scompo.intervals.merge.ConsecutiveChecker;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.IntervalMergingAlgorithm;
@@ -40,7 +40,7 @@ public abstract class AbstractFirstMerginAlgorithm<T extends Comparable<T>>
 
 		if (notNullElement(toMerge) && !toMerge.isEmpty()) {
 
-			List<Interval<T>> temp = cloneCollection(toMerge);
+			List<Interval<T>> temp = deepCopyCollectionIntoList(toMerge);
 
 			Collections.sort(temp, comparator);
 
