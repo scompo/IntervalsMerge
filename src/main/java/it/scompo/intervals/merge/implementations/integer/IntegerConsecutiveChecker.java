@@ -1,7 +1,7 @@
 package it.scompo.intervals.merge.implementations.integer;
 
+import it.scompo.intervals.merge.ConsecutiveChecker;
 import it.scompo.intervals.merge.Interval;
-import it.scompo.intervals.merge.utils.ConsecutiveChecker;
 
 public class IntegerConsecutiveChecker implements
 		ConsecutiveChecker<Interval<Integer>> {

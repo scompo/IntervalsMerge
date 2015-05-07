@@ -4,11 +4,11 @@ import static it.scompo.intervals.merge.utils.ComparisonUtils.max;
 import static it.scompo.intervals.merge.utils.ComparisonUtils.min;
 import static it.scompo.intervals.merge.utils.NullChekUtils.notNullElement;
 import static it.scompo.intervals.merge.utils.ScompoSerializationUtils.cloneCollection;
+import it.scompo.intervals.merge.ConsecutiveChecker;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.IntervalMergingAlgorithm;
 import it.scompo.intervals.merge.IntervalStartComparator;
 import it.scompo.intervals.merge.IntervalsOverlapChecker;
-import it.scompo.intervals.merge.utils.ConsecutiveChecker;
 
 import java.util.ArrayList;
 import java.util.Collections;

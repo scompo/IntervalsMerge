@@ -6,9 +6,9 @@ import static it.scompo.intervals.merge.test.IntervalsConstants.THREE_THREE;
 import static it.scompo.intervals.merge.test.IntervalsConstants.TWO_TWO;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import it.scompo.intervals.merge.ConsecutiveChecker;
 import it.scompo.intervals.merge.Interval;
 import it.scompo.intervals.merge.implementations.integer.IntegerConsecutiveChecker;
-import it.scompo.intervals.merge.utils.ConsecutiveChecker;
 
 import org.junit.After;
 import org.junit.Before;

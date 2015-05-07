@@ -1,6 +1,5 @@
-package it.scompo.intervals.merge.utils;
+package it.scompo.intervals.merge;
 
-import it.scompo.intervals.merge.Interval;
 
 public interface ConsecutiveChecker<T extends Interval<?>> {
 
