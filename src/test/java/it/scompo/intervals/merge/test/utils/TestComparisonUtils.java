@@ -1,8 +1,8 @@
 package it.scompo.intervals.merge.test.utils;
 
 import static it.scompo.intervals.merge.utils.ComparisonUtils.max;
+import static it.scompo.intervals.merge.utils.ComparisonUtils.min;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import org.junit.After;
 import org.junit.Before;
@@ -32,7 +32,11 @@ public class TestComparisonUtils {
 
 	@Test
 	public void testMin() {
-		fail("Not yet implemented");
+		
+		assertEquals(SMALL, min(SMALL, BIG));
+		assertEquals(SMALL, min(BIG, SMALL));
+		assertEquals(SMALL, min(SMALL, SMALL));
+		assertEquals(null, min(null, null));
 	}
 
 }
