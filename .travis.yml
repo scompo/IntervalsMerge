@@ -2,6 +2,6 @@ language: java
 jdk:
   - oraclejdk8
 
-after_success : 
-  -"chmod +x ./pmd-report.sh"
-  -"./pmd-report.sh"
+after_script : 
+  - "chmod +x ./pmd-report.sh"
+  - "./pmd-report.sh"
