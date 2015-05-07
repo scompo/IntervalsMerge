@@ -47,10 +47,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<configuration>
-					<skipPmdError>false</skipPmdError>
-				</configuration>
 			</plugin>
 		</plugins>
 	</reporting>
+	<properties>
+		<pmd.skipPmdError>false</pmd.skipPmdError>
+		<format>txt</format>
+	</properties>
 </project>
