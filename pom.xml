@@ -10,7 +10,6 @@
 
 	<properties>
 		<pmd.skipPmdError>false</pmd.skipPmdError>
-		<format>txt</format>
 	</properties>
 
 	<ciManagement>
