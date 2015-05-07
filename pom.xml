@@ -5,7 +5,7 @@
 	<artifactId>IntervalsMerge</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>IntervalsMerge</name>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -19,15 +19,15 @@
 			<version>3.4</version>
 		</dependency>
 	</dependencies>
-	
+
 	<url>https://github.com/scompo/IntervalsMerge</url>
 	<description>test for intervals merging</description>
-	
+
 	<ciManagement>
 		<url>https://travis-ci.org/scompo/IntervalsMerge</url>
 		<system>travis-ci</system>
 	</ciManagement>
-	
+
 	<scm>
 		<url>https://github.com/scompo/IntervalsMerge</url>
 		<developerConnection>scm:git:https://github.com/scompo/IntervalsMerge.git</developerConnection>
@@ -41,4 +41,16 @@
 		<name>Mauro Scomparin</name>
 		<url>https://github.com/scompo/IntervalsMerge</url>
 	</organization>
+	
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<configuration>
+					<skipPmdError>false</skipPmdError>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
 </project>

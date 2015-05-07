@@ -16,9 +16,11 @@ public class First<T extends Number & Comparable<? super T>> implements
 		IntervalMergingAlgorithm<T> {
 
 	private static final int FIRST_ELEMENT = 0;
+	
 	private Comparator<Interval<T>> COMPARATOR = new Comparator<Interval<T>>() {
 
 		public int compare(Interval<T> o1, Interval<T> o2) {
+			
 			
 			return o1.getStart().compareTo(o2.getStart());
 		}
